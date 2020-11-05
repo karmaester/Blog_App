@@ -1,11 +1,11 @@
 <header class="w-100 h-25 bg-danger">
-BLOG APP
+<div class="w-100 d-flex justify-content-center p-4 font-weight-bolder text-white text-decoration-none"><%= link_to "BLOG APP", sections_path, class: "text-white" %></div>
 </header>
 
 <div>
  <% @sections.each do |el| %>
   <div class='card'>
-    <%= el.name%>
+    <%= link_to el.name, el%>
   </div>
  <% end %>
 </div>
