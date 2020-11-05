@@ -1,4 +1,12 @@
 <header class="w-100 h-25 bg-danger">
- <p class="hi">Hola Kevin!</p>
+BLOG APP
 </header>
+
+<div>
+ <% @sections.each do |el| %>
+  <div class='card'>
+    <%= el.name%>
+  </div>
+ <% end %>
+</div>
    

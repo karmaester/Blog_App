@@ -1,5 +1,6 @@
 class SectionsController < ApplicationController
     def index
+        @sections = Section.all.order('created_at DESC')
     end
 
     def new
@@ -8,19 +9,22 @@ class SectionsController < ApplicationController
 
     def create
         @section = Section.new(section_params)
+        
         if @section.save
-            redirect @section
+            render 'show'
         else
             render 'new'
         end
+
     end
 
     def show
+        @section = Section.find(params[:id])
     end
 
     private
 
     def section_params
-        params.require(:post).permit(:name, :date)
+        params.require(:section).permit(:name)
     end
 end
