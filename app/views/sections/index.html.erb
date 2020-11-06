@@ -1,0 +1,22 @@
+<%= render '_header' %>
+
+<div class="container w-50 align-center">
+  <div class="card d-flex flex-row justify-content-center shadow p-1 mb-3 mt-2 bg-light rounded">
+    <%= link_to '+', new_section_path, class: 'text-success plus text-center decoration-none font-weight-bolder text-decoration-none'%>
+  </div>
+  <% @sections.each do |el| %>
+  <div class='card d-flex flex-row justify-content-between shadow p-3 mb-3 mt-2 bg-white rounded'>
+    <%= link_to el.name, el, class: 'text-dark decoration-none text-decoration-none font-weight-bolder  w-50'%>
+    <div class="container w-50 d-flex justify-content-end">
+      <button class="btn btn-warning decoration-none text-decoration-none font-weight-bolder mr-4">
+        <%= link_to 'Edit', edit_section_path(el), class: 'text-white' %>
+      </button>
+      <button class="btn btn-danger decoration-none text-decoration-none font-weight-bolder mr-4">
+          <%= link_to 'Destroy', section_path(el),
+          method: :delete,
+          data: { confirm: 'Are you sure to make this desition?' }, class: 'text-white' %>
+      </button>
+    </div>
+  </div>
+ <% end %>
+</div>

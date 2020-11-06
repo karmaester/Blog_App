@@ -1,0 +1,17 @@
+<div class="container w-50">
+<%= form_with(model: @section, local: true) do |f| %>
+    <div class="card shadow p-3 mb-3 mt-4 bg-white rounded">
+        <div class="text-dark text-center font-weight-bolder">
+            <%= f.label :name%>
+        </div>
+        <%= f.text_field :name%>
+        <div class="text-dark text-center font-weight-bolder">
+        <%= f.label :content%>
+        </div>
+        <%= f.text_area(:content, :size => "50x10")%>
+
+        <%= f.submit 'Submit', class: 'm-4 btn btn-success'%>
+    </div>
+
+<% end %>
+</div>
