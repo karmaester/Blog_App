@@ -3,6 +3,11 @@ class SectionsController < ApplicationController
         @sections = Section.all.order('created_at DESC')
     end
 
+    def edit
+        @section = Section.find(params[:id])
+    end
+    
+
     def new
         @section = Section.new
     end
@@ -21,6 +26,18 @@ class SectionsController < ApplicationController
     def show
         @section = Section.find(params[:id])
     end
+
+    def update
+        @section = Section.find(params[:id])
+        if @section.update_attributes(section_params)
+          flash[:success] = "Object was successfully updated"
+          redirect_to @section
+        else
+          flash[:error] = "Something went wrong"
+          render 'edit'
+        end
+    end
+    
 
     def destroy
         @section = Section.find(params[:id])

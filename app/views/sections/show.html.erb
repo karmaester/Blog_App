@@ -1,17 +1,24 @@
 <%= render '_header' %>
+<div class="container w-50">
+  <h1 class="text-dark text-center">
+    <%= @section.name%>
+  </h1>
+  <p>
+    <%= @section.content%>
+  </p>
 
-<h1>
-<%= @section.name%>
-</h1>
-<p>
-<%= @section.content%>
-</p>
 
-
-<div>
-  <div><%#= link_to 'Edit', edit_section_path(@section)%></div>
-  <div><%= link_to 'Back', sections_path %></div>
-  <%= link_to 'Destroy', section_path(@section),
-        method: :delete,
-        data: { confirm: 'Are you sure to make this desition?' } %>
+  <div class="d-flex justify-content-around">
+    <button class="btn btn-warning decoration-none text-decoration-none font-weight-bolder mr-4">
+      <%= link_to 'Back', sections_path, class: 'text-white' %>
+    </button>
+    <button class="btn btn-warning decoration-none text-decoration-none font-weight-bolder mr-4">
+      <%= link_to 'Edit', edit_section_path(@section), class: 'text-white'%>
+    </button>
+    <button class="btn btn-danger decoration-none text-decoration-none font-weight-bolder mr-4">
+    <%= link_to 'Destroy', section_path(@section),
+          method: :delete,
+          data: { confirm: 'Are you sure to make this desition?' }, class: 'text-white' %>
+    </button>
+  </div>
 </div>
