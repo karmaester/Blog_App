@@ -1,7 +1,11 @@
+<%= render '_header' %>
+
 <%= form_for @section do |f| %>
  <%= f.label :name%>
  <%= f.text_field :name%>
 <%= f.label :content%>
 <%= f.text_area(:content, :size => "50x10")%>
+
  <%= f.submit 'Create'%>
 <% end %>
+ 

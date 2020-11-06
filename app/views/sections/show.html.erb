@@ -1,3 +1,5 @@
+<%= render '_header' %>
+
 <h1>
 <%= @section.name%>
 </h1>
@@ -5,3 +7,11 @@
 <%= @section.content%>
 </p>
 
+
+<div>
+  <div><%#= link_to 'Edit', edit_section_path(@section)%></div>
+  <div><%= link_to 'Back', sections_path %></div>
+  <%= link_to 'Destroy', section_path,
+        method: :delete,
+        data: { confirm: 'Are you sure to make this desition?' } %>
+</div>

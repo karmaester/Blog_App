@@ -1,12 +1,14 @@
-<header class="w-100 h-25 bg-danger">
-<div class="w-100 d-flex justify-content-center p-4 font-weight-bolder text-white text-decoration-none"><%= link_to "BLOG APP", sections_path, class: "text-white" %></div>
-</header>
+<%= render '_header' %>
 
 <div>
  <% @sections.each do |el| %>
-  <div class='card'>
+  <div class='card d-flex'>
     <%= link_to el.name, el%>
+    <%= link_to 'Destroy', section_path(el),
+        method: :delete,
+        data: { confirm: 'Are you sure to make this desition?' } %>
   </div>
  <% end %>
 </div>
-   
+
+<div><%= link_to 'New', new_section_path %></div>
