@@ -2,9 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-header {
-    background-image: url('./images/header.jpg');
-    height: 200px;
+.header {
+    background-image: url("https://i.ibb.co/607ZFnZ/header.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
 }
 
 .plus {

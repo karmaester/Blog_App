@@ -7,10 +7,6 @@ class SectionsController < ApplicationController
         @section = Section.new
     end
 
-    def edit
-        @section = Section.find(params[:id])
-    end
-
     def create
         @section = Section.new(section_params)
         
@@ -34,17 +30,6 @@ class SectionsController < ApplicationController
         else
             flash[:error] = 'Something went wrong'
             redirect_to sections_path
-        end
-    end
-    
-    def update
-        @section = Section.find(params[:id])
-        if @section.update(section_params)
-          flash[:success] = "Object was successfully updated"
-          redirect_to @section
-        else
-          flash[:error] = "Something went wrong"
-          render 'edit'
         end
     end
     
