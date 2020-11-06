@@ -1,0 +1,22 @@
+// Place all the styles related to the Sections controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.header {
+    background-image: url("https://i.ibb.co/607ZFnZ/header.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.gradient {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5301470930168943) 34%, rgba(8,8,15,0.5553571770505077) 99%);
+}
+.plus {
+    font-size: 50px;
+}
+
+.title {
+    font-size: 45px;
+}
