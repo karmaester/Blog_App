@@ -1,0 +1,10 @@
+<%= render '_header' %>
+
+<%= form_with(model: @section, local: true) do |f| %>
+ <%= f.label :name%>
+ <%= f.text_field :name%>
+<%= f.label :content%>
+<%= f.text_area(:content, :size => "50x10")%>
+
+ <%= f.submit 'Update'%>
+<% end %>

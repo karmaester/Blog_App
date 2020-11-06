@@ -4,6 +4,7 @@
  <% @sections.each do |el| %>
   <div class='card d-flex'>
     <%= link_to el.name, el%>
+    <%= link_to 'edit', edit_section_path(el) %>
     <%= link_to 'Destroy', section_path(el),
         method: :delete,
         data: { confirm: 'Are you sure to make this desition?' } %>
