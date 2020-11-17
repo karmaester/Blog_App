@@ -1,24 +1,66 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Blog app
 
-Things you may want to cover:
+> Made as a practice for articles posting in rails. The app works in the development environment. It allows you to create new users and edit them.
 
-* Ruby version
 
-* System dependencies
+![screenshot](app/assets/images/screenshot1.png)
 
-* Configuration
+![screenshot](app/assets/images/screenshot2.png)
 
-* Database creation
+## Built With
 
-* Database initialization
+- Ruby
+- Ruby on rails
+- SQLite3
 
-* How to run the test suite
+## Pre-requisites
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby 2.7.0
+- Rails gem
+- Bundle
 
-* Deployment instructions
+## How it works
 
-* ...
+- Clone the repository locally from [here](git@github.com:karmaester/Blog_App.git)
+- Open re-former folder and run `Bundle install`
+- Run `rails db:migrate`
+- Run `rails server`
+- Open your browser
+- Type `http://localhost:3000/`
+
+## Authors
+
+👤 **Khristian Rojas**
+
+- Github: [@githubhandle](https://github.com/karmaester)
+- Twitter: [@twitterhandle](https://twitter.com/karmaendlich)
+- Linkedin: [linkedin](https://www.linkedin.com/in/khristian-rojas/)
+
+👤 **Kevin Cotrina**
+
+- Github: [@githubhandle](https://github.com/kcotrinam)
+- Twitter: [@twitterhandle](https://twitter.com/KevinCot12)
+- Linkedin: [linkedin](https://www.linkedin.com/in/kevin-cotrina-6208b7149/)
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/karmaester/Blog_App/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- The Odin Project
+- Rails guides
+- Microverse
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
